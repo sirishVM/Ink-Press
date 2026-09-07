@@ -120,7 +120,7 @@ export default function SignInPage() {
           </form>
 
           <div className="pt-4 border-t border-stone-100 dark:border-slate-800 text-center text-xs text-slate-500">
-            Don't have a writer profile? 
+            Don&apos;t have a writer profile? 
             <Link href="/auth/signup" className="text-purple-600 dark:text-purple-400 font-bold ml-1 hover:underline">
               Create one now
             </Link>

@@ -182,10 +182,10 @@ export default function HomeFeedPage() {
             <div className="rounded-3xl bg-amber-50/80 dark:bg-amber-950/20 border border-amber-200/80 dark:border-amber-900/40 p-6 space-y-3 font-sans shadow-sm">
               <div className="flex items-center gap-2 text-amber-800 dark:text-amber-300 font-mono text-xs font-bold uppercase">
                 <Quote size={14} className="text-amber-600" />
-                <span>CURATOR'S DESK</span>
+                <span>CURATOR&apos;S DESK</span>
               </div>
               <p className="text-xs leading-relaxed text-amber-950 dark:text-amber-200 italic font-serif text-sm">
-                "In 2026, the best writing isn't written for the search engine algorithm. It's written with deep human taste, rigorous technical clarity, and authentic style."
+                &ldquo;In 2026, the best writing isn&apos;t written for the search engine algorithm. It&apos;s written with deep human taste, rigorous technical clarity, and authentic style.&rdquo;
               </p>
               <div className="pt-2 flex items-center gap-2.5">
                 <img 

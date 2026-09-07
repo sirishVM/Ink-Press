@@ -52,7 +52,7 @@ export function NewsletterSubscribe({
           <div className="size-6 rounded-full bg-emerald-500 text-white flex items-center justify-center shrink-0">
             <Check size={13} />
           </div>
-          <span>You're in! Check your inbox for the latest dispatch archive.</span>
+          <span>You&apos;re in! Check your inbox for the latest dispatch archive.</span>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-3 font-sans">
