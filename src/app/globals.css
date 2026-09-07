@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 20% 98%; /* Warm Cream #FAF8F5 */
+    --foreground: 222 47% 11%; /* Slate Navy #0F172A */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 258 90% 66%; /* Pastel Electric Purple */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 25% 94%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 40 15% 93%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 258 90% 96%;
+    --accent-foreground: 258 90% 40%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 40 20% 90%;
+    --input: 40 20% 90%;
+    --ring: 258 90% 66%;
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 224 45% 6%; /* Deep Midnight Slate #090D16 */
+    --foreground: 210 40% 98%;
+    --card: 224 40% 9%; /* Darker card */
+    --card-foreground: 210 40% 98%;
+    --popover: 224 40% 9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 258 90% 70%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 224 35% 14%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 224 35% 14%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 258 90% 18%;
+    --accent-foreground: 258 90% 85%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 224 30% 16%;
+    --input: 224 30% 16%;
+    --ring: 258 90% 70%;
+  }
+
+  ::selection {
+    background-color: #DDD6FE;
+    color: #4C1D95;
+  }
+
+  .dark ::selection {
+    background-color: #6D28D9;
+    color: #EDE9FE;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased font-sans bg-[#FAF8F5] dark:bg-[#090D16] text-slate-900 dark:text-slate-100 min-h-screen transition-colors duration-200;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+/* Pastel Tint Utilities */
+.bg-pastel-lilac {
+  @apply bg-[#F5F3FF] dark:bg-[#2E1065]/30 border border-[#DDD6FE] dark:border-[#5B21B6]/50 text-[#6D28D9] dark:text-[#DDD6FE];
+}
+
+.bg-pastel-mint {
+  @apply bg-[#F0FDF4] dark:bg-[#052E16]/30 border border-[#BBF7D0] dark:border-[#166534]/50 text-[#15803D] dark:text-[#BBF7D0];
+}
+
+.bg-pastel-peach {
+  @apply bg-[#FFF7ED] dark:bg-[#431407]/30 border border-[#FED7AA] dark:border-[#9A3412]/50 text-[#C2410C] dark:text-[#FED7AA];
+}
+
+.bg-pastel-sky {
+  @apply bg-[#F0F9FF] dark:bg-[#082F49]/30 border border-[#BAE6FD] dark:border-[#075985]/50 text-[#0369A1] dark:text-[#BAE6FD];
+}
+
+.bg-pastel-rose {
+  @apply bg-[#FFF1F2] dark:bg-[#4C0519]/30 border border-[#FECDD3] dark:border-[#9F1239]/50 text-[#BE123C] dark:text-[#FECDD3];
+}
+
+.bg-pastel-lemon {
+  @apply bg-[#FEFCE8] dark:bg-[#422006]/30 border border-[#FEF08A] dark:border-[#854D0E]/50 text-[#A16207] dark:text-[#FEF08A];
+}
+
+/* Tiptap & Editorial Article Typography */
+.tiptap-content,
+.article-prose {
+  @apply text-base sm:text-lg leading-relaxed text-slate-800 dark:text-slate-200 font-sans;
+}
+
+.tiptap-content h1,
+.article-prose h1 {
+  @apply text-3xl sm:text-4xl font-display font-bold tracking-tight mt-8 mb-4 text-slate-900 dark:text-white;
+}
+
+.tiptap-content h2,
+.article-prose h2 {
+  @apply text-2xl sm:text-3xl font-display font-semibold tracking-tight mt-8 mb-3 text-slate-900 dark:text-white;
+}
+
+.tiptap-content h3,
+.article-prose h3 {
+  @apply text-xl sm:text-2xl font-display font-medium tracking-tight mt-6 mb-2 text-slate-900 dark:text-white;
+}
+
+.tiptap-content p,
+.article-prose p {
+  @apply mb-5 leading-relaxed font-normal;
+}
+
+.tiptap-content blockquote,
+.article-prose blockquote {
+  @apply border-l-4 border-purple-400 dark:border-purple-500 bg-purple-50/50 dark:bg-purple-950/20 px-6 py-4 rounded-r-2xl my-6 italic text-lg sm:text-xl font-serif text-slate-800 dark:text-slate-200;
+}
+
+.tiptap-content ul,
+.article-prose ul {
+  @apply list-disc pl-6 mb-5 space-y-2;
+}
+
+.tiptap-content ol,
+.article-prose ol {
+  @apply list-decimal pl-6 mb-5 space-y-2;
+}
+
+.tiptap-content code,
+.article-prose code {
+  @apply font-mono text-sm bg-purple-50 dark:bg-purple-950/40 text-purple-900 dark:text-purple-300 px-2 py-0.5 rounded-md border border-purple-200 dark:border-purple-800/60;
+}
+
+.tiptap-content pre,
+.article-prose pre {
+  @apply font-mono text-sm bg-slate-950 text-slate-100 p-5 rounded-2xl my-6 overflow-x-auto border border-slate-800 shadow-sm;
+}
+
+.tiptap-content img,
+.article-prose img {
+  @apply rounded-3xl my-8 w-full object-cover border border-slate-200/80 dark:border-slate-800 shadow-md;
+}
+
+.tiptap-content hr,
+.article-prose hr {
+  @apply my-10 border-t-2 border-dashed border-slate-200 dark:border-slate-800;
+}
+
+/* ProseMirror focus */
+.ProseMirror {
+  outline: none !important;
+  min-height: 320px;
+}
+
+.ProseMirror p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: #94A3B8;
+  pointer-events: none;
+  height: 0;
+}
